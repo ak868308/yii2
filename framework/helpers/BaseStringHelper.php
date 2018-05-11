@@ -104,7 +104,7 @@ class BaseStringHelper
      */
     public static function truncate($string, $length, $suffix = '...', $encoding = null, $asHtml = false)
     {
-        if ($encoding === null) {
+        if ($encoding === null || $encoding === '') {
             $encoding = Yii::$app ? Yii::$app->charset : 'UTF-8';
         }
         if ($asHtml) {
